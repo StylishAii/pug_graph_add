@@ -1,0 +1,26 @@
+{
+  "name": "gulp-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hqdrone/gulp-dev.git"
+  },
+  "author": "hqdrone@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hqdrone/gulp-dev/issues"
+  },
+  "homepage": "https://github.com/hqdrone/gulp-dev#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-stylus": "^2.7.0"
+  }
+}
