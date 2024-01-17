@@ -1,0 +1,37 @@
+.sightsTable {
+  margin: auto;
+  text-align: center;
+  border-style: solid;
+  border: 5px 5px 5px 5px;
+}
+body {
+  background-color: #f8efec;
+}
+a {
+  margin: 16px;
+  color: #000;
+  font-weight: bold;
+}
+a:hover {
+  color: #945e3c;
+  font-weight: bold;
+}
+h3 {
+  margin: 16px;
+}
+nav {
+  background-color: #e78d70;
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.menus {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media all and (max-width: 700px) {
+  .menus {
+    display: block;
+  }
+}

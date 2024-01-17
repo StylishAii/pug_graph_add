@@ -1,0 +1,27 @@
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -moz-column-gap: 16px;
+  column-gap: 16px;
+  row-gap: 16px;
+}
+img {
+  width: 80vh;
+}
+nav {
+  display: flex;
+  background-color: #add8e6;
+  -moz-column-gap: 16px;
+  column-gap: 16px;
+  align-items: center;
+  padding: 8px;
+}
+img:hover {
+  opacity: 0.8;
+}
+@media all and (max-width: 700px) {
+  .images {
+    flex-direction: column;
+  }
+}

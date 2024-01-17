@@ -1,0 +1,23 @@
+footer {
+  background-color: #808080;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+}
+.author {
+  text-align: start;
+  align-self: flex-start;
+  vertical-align: middle;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  flex-grow: 1;
+}
+.contacts {
+  text-align: end;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  flex-grow: 1;
+  align-self: flex-end;
+}

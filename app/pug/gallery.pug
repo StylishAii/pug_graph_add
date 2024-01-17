@@ -1,0 +1,24 @@
+extends template
+block variables
+    -
+        var images = [
+            'https://www.be-en.co.jp/upload/save_image/0307140205_6406c54d13485.jpg',
+            'https://twomonkeystravelgroup.com/wp-content/uploads/2020/02/Things-To-Do-in-Shibuya-Japan8.jpg',
+            'https://topvoyager.com/wp-content/uploads/2020/12/castles-of-japan-12-1.jpg',
+            'https://i.natgeofe.com/n/508c82e4-efb5-4273-80ad-dcf1a043e6e6/temple-kyoto-japan.jpg',
+            'https://girleatworld.net/wp-content/uploads/2022/05/kyoto-higashiyama-disctrict-01-1024x682.jpg',
+            'https://media.istockphoto.com/id/621945214/video/time-lapse-of-gion-kyoto.jpg?s=640x640&k=20&c=WvkUWaWNrwCPOdkvd8yGHb_w7FqtFd3r0vI5IUG2NMw='
+        ]
+block title 
+    title Галерея
+    link(rel="stylesheet", href="css/bootstrap-reboot.min.css")
+    link(rel="stylesheet", href="css/gallery.css")
+    link(rel="stylesheet", href="css/footer.css")
+block header
+    nav
+        h3 Галерея
+        a(href="index.html") Главные достопримечательности 
+block content
+    .images
+        each imgUrl in images
+            img(src=imgUrl)

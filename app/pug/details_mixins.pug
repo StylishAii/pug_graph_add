@@ -1,0 +1,82 @@
+mixin filterDetails()
+    details.filter
+            summary Фильтр
+            form
+                div 
+                    .name
+                        label(for = "name") Название:
+                        input(type="text" name="name")
+                    .location
+                        label(for="location") Местонахождение:
+                        input(type="text" name="location")
+                    .type
+                        label(for="type") Тип:
+                        input(type="text" name="type")
+                    .year
+                        label(for="minYear") Год постройки: от
+                        input(type="number" name="minYear")
+                        label(for="maxYear") до:
+                        input(type="number" name="maxYear")
+                input(type="submit" value="Найти")
+mixin graphDetails()
+    details.graph
+            summary График
+            form
+                div.graph 
+                    p Значение по оси ОХ
+                    .year
+                        input(type="radio" name="xValue" value="year")
+                        label(for = "year") Год
+                    .location
+                        input(type="radio" name="xValue" value="location")
+                        label(for="location") Местонахождение
+                    .type
+                        input(type="radio" name="xValue" value="type")
+                        label(for="type") Тип
+                div
+                    p Результат
+                    .year
+                        input(type="checkbox" name="result" value="minYear")
+                        label(for = "minYear") Самая старая достопримечательность
+                    .location
+                        input(type="checkbox" name="result" value="maxYear")
+                        label(for="maxYear") Самая новая достопримечательность
+                    .type
+                        input(type="checkbox" name="result" value="city")
+                        label(for="city")  Количество достопримечательностей
+                input(type="submit" value="Построить")
+mixin sortDetails()
+    details.sort
+            summary Сортировка
+            form
+                div 
+                    p Первый уровень:
+                    select(name="sortFirst")
+                        option(value="0") Нет
+                        option(value="1") Название
+                        option(value="2") Местположение
+                        option(value="3") Год постройки
+                        option(value="4") Тип
+                    label(for="decFirst") По убыванию?
+                    input(type="checkbox", name="decFirst")
+                div 
+                    p Второй уровень:
+                    select(name="sortFirst")
+                        option(value="0") Нет
+                        option(value="1") Название
+                        option(value="2") Местположение
+                        option(value="3") Год постройки
+                        option(value="4") Тип
+                    label(for="decSecond") По убыванию?
+                    input(type="checkbox", name="decSecond")
+                div 
+                    p Третий уровень:
+                    select(name="sortFirst")
+                        option(value="0") Нет
+                        option(value="1") Название
+                        option(value="2") Местположение
+                        option(value="3") Год постройки
+                        option(value="4") Тип
+                    label(for="decThird") По убыванию?
+                    input(type="checkbox", name="decThird")
+                input(type="submit" value="Сортировать")

@@ -1,0 +1,29 @@
+.sightsTable
+    margin auto
+    text-align: center
+    border-style: solid
+    border: 5px 5px 5px 5px
+
+body
+    background-color: rgb(248, 239, 236)
+ a
+    &:hover
+        color: rgb(148, 94, 60)
+        font-weight: bold
+    margin: 16px
+    color: black
+    font-weight: bold
+h3
+    margin: 16px
+nav
+    background-color: rgb(231, 141, 112)
+    text-align: center
+    display: flex
+    flex-wrap: nowrap
+.menus
+    display: grid
+    justify-items: center
+    grid-template-columns: 1fr 1fr 1fr
+@media all and (max-width: 700px)
+    .menus
+        display: block

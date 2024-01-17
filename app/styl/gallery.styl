@@ -1,0 +1,22 @@
+.images
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    column-gap: 16px
+    row-gap: 16px
+    
+img
+    width: 80vh
+nav
+    display: flex
+    background-color: lightblue
+    column-gap: 16px
+    align-items: center
+    padding: 8px
+img
+    &:hover
+        opacity: 0.8
+
+@media all and (max-width: 700px)
+    .images
+        flex-direction column

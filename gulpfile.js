@@ -7,7 +7,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const browsersync = require('browser-sync').create();
 
 gulp.task('stylus', function(){
-  return gulp.src('app/styl/**/main.styl')
+  return gulp.src('app/styl/*.styl')
     .pipe(stylus())
     .pipe(autoprefixer({
       cascade: false
