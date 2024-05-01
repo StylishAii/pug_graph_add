@@ -44,79 +44,63 @@
               <label for="city"> Количество достопримечательностей</label>
             </div>
           </div>
-          <input type="submit" value="Построить"/>
+          <input type="button" value="Построить"/>
         </form>
       </details>
       <details class="filter">
         <summary>Фильтр</summary>
-        <form>
+        <form id="filters">
           <div> 
             <div class="name">
               <label for="name">Название:</label>
-              <input type="text" name="name"/>
+              <input type="text" name="name" id="name"/>
             </div>
             <div class="location">
               <label for="location">Местонахождение:</label>
-              <input type="text" name="location"/>
+              <input type="text" name="location" id="location"/>
             </div>
             <div class="type">
               <label for="type">Тип:</label>
-              <input type="text" name="type"/>
+              <input type="text" name="type" id="type"/>
             </div>
             <div class="year">
               <label for="minYear">Год постройки: от</label>
-              <input type="number" name="minYear"/>
+              <input type="number" name="minYear" id="minYear"/>
               <label for="maxYear">до:</label>
-              <input type="number" name="maxYear"/>
+              <input type="number" name="maxYear" id="maxYear"/>
             </div>
           </div>
-          <input type="submit" value="Найти"/>
+          <input type="button" value="Найти" id="find"/>
+          <input type="reset" value=" Очистить фильтры" id="clear"/>
         </form>
       </details>
       <details class="sort">
         <summary>Сортировка</summary>
-        <form>
+        <form id="sort">
           <div> 
             <p>Первый уровень:</p>
-            <select name="sortFirst">
-              <option value="0">Нет</option>
-              <option value="1">Название</option>
-              <option value="2">Местположение</option>
-              <option value="3">Год постройки</option>
-              <option value="4">Тип</option>
-            </select>
+            <select name="sortFirst" id="sortFirst"></select>
             <label for="decFirst">По убыванию?</label>
-            <input type="checkbox" name="decFirst"/>
+            <input type="checkbox" id="sortFirstDec"/>
           </div>
           <div> 
             <p>Второй уровень:</p>
-            <select name="sortFirst">
-              <option value="0">Нет</option>
-              <option value="1">Название</option>
-              <option value="2">Местположение</option>
-              <option value="3">Год постройки</option>
-              <option value="4">Тип</option>
-            </select>
+            <select name="sortSecond" id="sortSecond"></select>
             <label for="decSecond">По убыванию?</label>
-            <input type="checkbox" name="decSecond"/>
+            <input type="checkbox" id="sortSecondDec"/>
           </div>
           <div> 
             <p>Третий уровень:</p>
-            <select name="sortFirst">
-              <option value="0">Нет</option>
-              <option value="1">Название</option>
-              <option value="2">Местположение</option>
-              <option value="3">Год постройки</option>
-              <option value="4">Тип</option>
-            </select>
+            <select name="sortThird" id="sortThird"></select>
             <label for="decThird">По убыванию?</label>
-            <input type="checkbox" name="decThird"/>
+            <input type="checkbox" id="sortThirdDec"/>
           </div>
-          <input type="submit" value="Сортировать"/>
+          <input type="button" value="Сортировать" id="sortBtn"/>
+          <input type="reset" value="Сбросить" id="resetSort"/>
         </form>
       </details>
     </div>
-    <table class="sightsTable" border="5">
+    <table class="sightsTable" border="5" id="sightsTable">
       <tr> 
         <th>Название</th>
         <th>Тип</th>
@@ -418,6 +402,8 @@
         <td>1889</td>
       </tr>
     </table>
+    <script src="js/filters.js"></script>
+    <script src="js/sorting.js"></script>
     <footer>
       <div class="author">© Терехин Б.Д., Б9121-09.03.04(4), 2023-2024</div>
       <div class="contacts"><a href="https://github.com/Ronin-D">GitHub</a></div>

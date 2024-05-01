@@ -1,23 +1,24 @@
 mixin filterDetails()
     details.filter
             summary Фильтр
-            form
+            form#filters
                 div 
                     .name
                         label(for = "name") Название:
-                        input(type="text" name="name")
+                        input(type="text" name="name" id="name")
                     .location
                         label(for="location") Местонахождение:
-                        input(type="text" name="location")
+                        input(type="text" name="location" id="location")
                     .type
                         label(for="type") Тип:
-                        input(type="text" name="type")
+                        input(type="text" name="type" id="type")
                     .year
                         label(for="minYear") Год постройки: от
-                        input(type="number" name="minYear")
+                        input(type="number" name="minYear" id="minYear")
                         label(for="maxYear") до:
-                        input(type="number" name="maxYear")
-                input(type="submit" value="Найти")
+                        input(type="number" name="maxYear" id="maxYear")
+                input(type="button" value="Найти" id="find")
+                input(type="reset" value=" Очистить фильтры" id="clear")
 mixin graphDetails()
     details.graph
             summary График
@@ -44,39 +45,25 @@ mixin graphDetails()
                     .type
                         input(type="checkbox" name="result" value="city")
                         label(for="city")  Количество достопримечательностей
-                input(type="submit" value="Построить")
+                input(type="button" value="Построить")
 mixin sortDetails()
     details.sort
             summary Сортировка
-            form
+            form#sort
                 div 
                     p Первый уровень:
-                    select(name="sortFirst")
-                        option(value="0") Нет
-                        option(value="1") Название
-                        option(value="2") Местположение
-                        option(value="3") Год постройки
-                        option(value="4") Тип
+                    select(name="sortFirst" id="sortFirst")
                     label(for="decFirst") По убыванию?
-                    input(type="checkbox", name="decFirst")
+                    input(type="checkbox", id="sortFirstDec")
                 div 
                     p Второй уровень:
-                    select(name="sortFirst")
-                        option(value="0") Нет
-                        option(value="1") Название
-                        option(value="2") Местположение
-                        option(value="3") Год постройки
-                        option(value="4") Тип
+                    select(name="sortSecond" id="sortSecond")
                     label(for="decSecond") По убыванию?
-                    input(type="checkbox", name="decSecond")
+                    input(type="checkbox", id="sortSecondDec")
                 div 
                     p Третий уровень:
-                    select(name="sortFirst")
-                        option(value="0") Нет
-                        option(value="1") Название
-                        option(value="2") Местположение
-                        option(value="3") Год постройки
-                        option(value="4") Тип
+                    select(name="sortThird" id="sortThird")
                     label(for="decThird") По убыванию?
-                    input(type="checkbox", name="decThird")
-                input(type="submit" value="Сортировать")
+                    input(type="checkbox", id="sortThirdDec")
+                input(type="button" value="Сортировать", id="sortBtn")
+                input(type="reset" value="Сбросить", id="resetSort")

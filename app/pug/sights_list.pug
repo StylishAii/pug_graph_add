@@ -67,7 +67,7 @@ block content
         +graphDetails()
         +filterDetails()
         +sortDetails()
-    table(border="5").sightsTable
+    table(border="5")#sightsTable.sightsTable
         tr 
             th Название
             th Тип
@@ -79,3 +79,5 @@ block content
                 td= sight.type
                 td= sight.location
                 td= sight.buildDate
+    script(src="js/filters.js")
+    script(src="js/sorting.js")
