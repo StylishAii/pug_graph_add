@@ -185,9 +185,15 @@ document.addEventListener("DOMContentLoaded", setSortSelects(
 
 document.getElementById('sortFirst').onchange = () => {
     changeNextSelect('sortSecond', document.getElementById('sortFirst'))
+    if (document.getElementById('sortFirst').value==0) {
+        resetSort('sightsTable')
+    }
 }
 document.getElementById('sortSecond').onchange = () => {
     changeNextSelect('sortThird', document.getElementById('sortSecond'))
+    if (document.getElementById('sortSecond').value==0) {
+        resetSort('sightsTable')
+    }
 }
 
 document.getElementById('sortBtn').onclick = () => {

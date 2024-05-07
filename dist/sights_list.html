@@ -16,35 +16,31 @@
         <form>
           <div class="graph"> 
             <p>Значение по оси ОХ</p>
-            <div class="year">
-              <input type="radio" name="xValue" value="year"/>
-              <label for="year">Год</label>
-            </div>
-            <div class="location">
-              <input type="radio" name="xValue" value="location"/>
-              <label for="location">Местонахождение</label>
-            </div>
-            <div class="type">
-              <input type="radio" name="xValue" value="type"/>
-              <label for="type">Тип</label>
-            </div>
+            <select name="OX">
+              <div class="location">
+                <option name="xValue" value="location">Местонахождение</option>
+              </div>
+              <div class="type">
+                <option name="xValue" value="type">Тип</option>
+              </div>
+            </select>
           </div>
           <div>
             <p>Результат</p>
-            <div class="year">
-              <input type="checkbox" name="result" value="minYear"/>
-              <label for="minYear">Самая старая достопримечательность</label>
-            </div>
-            <div class="location">
-              <input type="checkbox" name="result" value="maxYear"/>
-              <label for="maxYear">Самая новая достопримечательность</label>
-            </div>
-            <div class="type">
-              <input type="checkbox" name="result" value="city"/>
-              <label for="city"> Количество достопримечательностей</label>
-            </div>
+            <select name="OY">
+              <div class="year">
+                <option name="result" value="buildDate">Самая старая достопримечательность</option>
+              </div>
+            </select>
           </div>
-          <input type="button" value="Построить"/>
+          <input type="checkbox" name="maxCheck" checked="checked"/>
+          <label for="maxCheck">Максимум</label><br/>
+          <input type="checkbox" name="minCheck"/>
+          <label for="minCheck">Минимум</label><br/>
+          <input type="button" value="Построить" id="build"/>
+          <div id="graph">
+            <svg height="10"></svg>
+          </div>
         </form>
       </details>
       <details class="filter">
@@ -403,7 +399,9 @@
       </tr>
     </table>
     <script src="js/filters.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="js/sorting.js"></script>
+    <script src="js/graph.js"></script>
     <footer>
       <div class="author">© Терехин Б.Д., Б9121-09.03.04(4), 2023-2024</div>
       <div class="contacts"><a href="https://github.com/Ronin-D">GitHub</a></div>

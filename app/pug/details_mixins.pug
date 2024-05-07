@@ -25,27 +25,31 @@ mixin graphDetails()
             form
                 div.graph 
                     p Значение по оси ОХ
-                    .year
-                        input(type="radio" name="xValue" value="year")
-                        label(for = "year") Год
-                    .location
-                        input(type="radio" name="xValue" value="location")
-                        label(for="location") Местонахождение
-                    .type
-                        input(type="radio" name="xValue" value="type")
-                        label(for="type") Тип
+                    select(name="OX")
+                        //- .year
+                        //-     option(name="xValue" value="year") Год
+                        .location
+                            option(name="xValue" value="location") Местонахождение
+                        .type
+                            option(name="xValue" value="type") Тип
                 div
                     p Результат
-                    .year
-                        input(type="checkbox" name="result" value="minYear")
-                        label(for = "minYear") Самая старая достопримечательность
-                    .location
-                        input(type="checkbox" name="result" value="maxYear")
-                        label(for="maxYear") Самая новая достопримечательность
-                    .type
-                        input(type="checkbox" name="result" value="city")
-                        label(for="city")  Количество достопримечательностей
-                input(type="button" value="Построить")
+                    select(name="OY")
+                        .year
+                            option(name="result" value="buildDate") Самая старая достопримечательность
+                    //-    .location
+                    //-         option(name="result" value="buildDate") Самая новая достопримечательность 
+                        //- .type
+                        //-     option(name="result" value="city") Количество достопримечательностей
+                input(type="checkbox" name="maxCheck" checked) 
+                label(for="maxCheck") Максимум
+                br
+                input(type="checkbox" name="minCheck")
+                label(for="minCheck") Минимум
+                br
+                input(type="button" value="Построить" id="build")
+                #graph
+                    svg(height=10)
 mixin sortDetails()
     details.sort
             summary Сортировка

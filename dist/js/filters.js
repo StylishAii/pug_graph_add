@@ -105,7 +105,7 @@ function getFilters(form) {
     }
     return filters
 }
-let filteredTableBackup = null
+let filteredTableBackup = tableData
 
 function filterTable(data,idTable,form) {
     const filters = getFilters(form)
